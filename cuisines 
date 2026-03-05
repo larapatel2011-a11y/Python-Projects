@@ -1,0 +1,5 @@
+cuisines = {"italy":"pasta", "japan":"sushi", "spain": "paella", "china": "noodles" }
+for key in cuisines:
+    print (key)
+user = input("Which cuisine do you want to eat?: ")
+print (cuisines[user])
