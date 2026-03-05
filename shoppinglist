@@ -1,0 +1,29 @@
+products ={"milk":1, "eggs": 2, "crisps": 2, "hat": 5, "socks":3}
+
+
+
+cart = {}
+
+
+
+for key,value in products.items():
+    print(key,value)
+
+while True:
+    choice = input("which item do you want in your bag?: ")
+    if choice == "stop":
+        break
+    quantity = int(input("how many do you want?: "))
+    if choice in products:
+        cart [choice] = quantity
+        print (cart)
+    else:
+        print("That is not a product")
+total = 0
+for key,value in cart.items():
+    print (key,value)
+    print(products[key])
+    price = products[key]*value
+    print(price)
+    total = total+price
+    print("The final price is " + str(total))
